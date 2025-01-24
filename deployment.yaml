@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: argo-fb-app
-        image: sameermaner/fbargo:v21
+        image: sameermaner/fbargo:v22
         imagePullPolicy: Always
         stdin: true
         tty: true
