@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Deployment
+metadata:
+ name: fbweb-argocd
+spec:
+ replicas: 2
+ selector:
+  matchLabels:
+    app: argo-fb-app
+ template:
+  metadata:
+   labels: 
+     app: argo-fb-app
+  spec:
+    containers:
+    - name: argo-fb-app
+       image: sameermaner/fbargo:v4
+       imagePullPolicy: Always
+       stdin: true 
+       tty: true
